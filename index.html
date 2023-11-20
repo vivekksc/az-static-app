@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<h1>The iframe element</h1>
-<!-- 
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '874891607198598',
+                xfbml: true,
+                version: 'v18.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <h1>The iframe element</h1>
+    <!-- 
 <iframe src="https://www.facebook.com" title="W3Schools Free Online Web Tutorials">
 </iframe> -->
 
-<!-- <iframe src="https://www.facebook.com" width="450" height="300" title="W3Schools Free Online Web Tutorials" 
+    <!-- <iframe src="https://www.facebook.com" width="450" height="300" title="W3Schools Free Online Web Tutorials" 
 allow="X-Frame-Options" sandbox="allow-same-origin"></iframe>
 </iframe> -->
 
-<embed src="https://www.facebook.com" width="1450" height="700" type=""></embed>
+    <embed src="https://www.facebook.com" width="1450" height="700" type=""></embed>
 
 </body>
+
 </html>
